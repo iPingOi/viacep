@@ -2,14 +2,77 @@
 <html lang="en">
 
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ViaCEP</title>
+
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet" />
 </head>
 
 <body>
+  <header class="nav-container">
+    <nav class="nav-main">
+      <h1>ViaCEP</h1>
 
+      <div class="contact">contato</div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="form" class="form-container">
+      <div class="form-card">
+        <form name="newAddress">
+          <div class="form-control">
+            <label for="cep">CEP:</label>
+            <input type="number" name="cep" id="cep" placeholder="CEP" class="form-input" />
+            <div class="error-message" data-error="cep"></div>
+          </div>
+
+          <div class="form-control">
+            <label for="street">Logradouro:</label>
+            <input type="text" name="street" id="street" placeholder="Logradouro" class="form-input" disabled />
+          </div>
+
+          <div class="form-control">
+            <label for="number">Número:</label>
+            <input type="number" name="number" id="number" placeholder="Número" class="form-input" />
+            <div class="error-message" data-error="number"></div>
+          </div>
+
+          <div class="form-control">
+            <label for="city">Cidade:</label>
+            <input type="text" name="city" id="city" placeholder="Cidade" class="form-input" disabled />
+          </div>
+
+          <div class="btn-container">
+            <button name="btnSave" type="submit">Salvar</button>
+            <button name="btnClear">Limpar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section id="list" class="list-container">
+      <div class="list-item">
+        <h3>São Paulo</h3>
+        <p class="address-line">Rua dos jardins, 720</p>
+        <p class="address-cep">11200-345</p>
+      </div>
+
+      <div class="list-item">
+        <h3>São Paulo</h3>
+        <p class="address-line">Rua dos jardins, 720</p>
+        <p class="address-cep">11200-345</p>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="./assets/js/main.js"></script>
 </body>
 
 </html>
